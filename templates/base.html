@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-          crossorigin="anonymous">
-    <title>Продолжение твоего начала</title>
+	<head>
+		<meta charset="utf-8">
+            <title>Продолжение твоего начала</title>
 
+		<style>
+		p {
+            font-size: 36px;
+	        padding-top: 10px;
+
+	        text-align: center;
+		}</style>
+        <style>
+        header{
+            width: 100%;
+            background: #E7ECFF;
+            height: 70px;
+        }
+        </style>
+        <style>
+
+        body {
+  background: #C6D8FF;
+}
+.closing-button {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px;
+  color: white;
+  box-shadow: 0 0 0 2px white;
+  padding: 20px 0;
+  width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  overflow: hidden;
+}
+.closing-button span {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  z-index: 5;
+}
+.closing-button:before, .closing-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.closing-button:before {
+  transform: translateX(-100%);
+  background: white;
+  transition: transform .3s cubic-bezier(.55, .055, .675, .19);
+}
+.closing-button:after {
+  background: #FDEED9;
+  transform: translateX(100%);
+  transition: transform .3s cubic-bezier(.16, .73, .58, .62) .3s;
+}
+.closing-button:hover:before, .closing-button:hover:after {
+  transform: translateX(0);
+}
+</style>
 </head>
-<h1 align="center" style="color:Black">Шаришь</h1>
+<body>
+<div id = "wrap">
+	<header>
+<p>Шаришь</p>
+</header>
+</div>
+<a href="" class="closing-button"><span>Button</span></a>
+</body>
 </html>
