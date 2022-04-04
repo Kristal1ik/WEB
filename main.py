@@ -19,6 +19,9 @@ def index():
 def start():
     return render_template('base.html')
 
+@app.route('/home_page')
+def home():
+    return render_template('home_page.html')
 
 if __name__ == '__main__':
     app.run(port=8000, host='127.0.0.1')
