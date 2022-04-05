@@ -1,8 +1,32 @@
-import json
+from flask import Flask, render_template, redirect, request, make_response, session
+from flask_wtf import FlaskForm
+from werkzeug.exceptions import abort
+from wtforms import EmailField, PasswordField, BooleanField, SubmitField
+from wtforms.validators import DataRequired
 
-from flask import Flask, render_template
+from forms.user import RegisterForm, LoginForm
+from data.news import News
+from data.users import User
+from data import db_session
+from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
 app = Flask(__name__)
+login_manager = LoginManager()
+login_manager.init_app(app)
+app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+
+
+
+def main():
+    db_session.global_init("db/blogs.db")
+    app.run()
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    db_sess = db_session.create_session()
+    return db_sess.query(User).get(user_id)
+
 
 @app.route("/8")
 def index():
@@ -20,5 +44,26 @@ def start():
     return render_template('base.html')
 
 
+@app.route('/home_page')
+def home():
+    return render_template('home_page.html')
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        user = db_sess.query(User).filter(User.email == form.email.data).first()
+        if user and user.check_password(form.password.data):
+            login_user(user, remember=form.remember_me.data)
+            return redirect("/")
+        return render_template('login.html',
+                               message="Неправильный логин или пароль",
+                               form=form)
+    return render_template('login.html', title='Авторизация', form=form)
+
+
+
 if __name__ == '__main__':
-    app.run(port=8000, host='127.0.0.1')
+    app.run(port=500, host='127.0.0.1')
