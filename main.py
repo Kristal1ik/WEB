@@ -43,6 +43,9 @@ def index():
 def start():
     return render_template('base.html')
 
+@app.route('/home_page')
+def home():
+    return render_template('home_page.html')
 
 @app.route('/home_page')
 def home():
