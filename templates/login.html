@@ -1,18 +1,27 @@
-
+{% block content %}
     <h1>Авторизация</h1>
     <form action="" method="post">
-        <input id="csrf_token" name="csrf_token" type="hidden" value="IjZjODM4ZjhiZTBhOGYxZjk5ZWVmMDYyMTgwNTNhMDE5NzQyN2UzZGEi.YlGUTQ.Kk5E35hIbQQYa5Qtk0aQOfEVzUU">
+        {{ form.hidden_tag() }}
         <p>
-            <label for="email">Почта</label><br>
-            <input class="form-control" id="email" name="email" required type="email" value=""><br>
-
+            {{ form.email.label }}<br>
+            {{ form.email(class="form-control", type="email") }}<br>
+            {% for error in form.email.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
         </p>
         <p>
-            <label for="password">Пароль</label><br>
-            <input class="form-control" id="password" name="password" required type="password" value=""><br>
-
+            {{ form.password.label }}<br>
+            {{ form.password(class="form-control", type="password") }}<br>
+            {% for error in form.password.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
         </p>
-        <p><input id="remember_me" name="remember_me" type="checkbox" value="y"> <label for="remember_me">Запомнить меня</label></p>
-        <p><input class="btn btn-primary" id="submit" name="submit" type="submit" value="Войти"></p>
-        <div></div>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+        <div>{{ message }}</div>
     </form>
+{% endblock %}
