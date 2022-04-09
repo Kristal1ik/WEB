@@ -3,7 +3,6 @@ from flask_wtf import FlaskForm
 from werkzeug.exceptions import abort
 from wtforms import EmailField, PasswordField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
-
 from forms.user import RegisterForm, LoginForm
 from data.news import News
 from data.users import User
@@ -18,7 +17,6 @@ app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 def main():
     db_session.global_init("db/blogs.db")
-    app.run()
 
 
 @login_manager.user_loader
@@ -56,7 +54,7 @@ def login():
         user = db_sess.query(User).filter(User.email == form.email.data).first()
         if user and user.check_password(form.password.data):
             login_user(user, remember=form.remember_me.data)
-            return redirect("/")
+            return redirect("/home_page")
         return render_template('login.html',
                                message="Неправильный логин или пароль",
                                form=form)
@@ -64,7 +62,7 @@ def login():
 
 
 @app.route('/register', methods=['GET', 'POST'])
-def reqister():
+def register():
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
@@ -87,4 +85,5 @@ def reqister():
 
 
 if __name__ == '__main__':
-    app.run(port=500, host='127.0.0.1')
+    main()
+    app.run(port=8080, host='127.0.0.1')
