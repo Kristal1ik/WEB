@@ -25,15 +25,30 @@ def load_user(user_id):
     return db_sess.query(User).get(user_id)
 
 
-@app.route("/8")
+@app.route("/j")
 def index():
-    db_sess = db_session.create_session()
-    if current_user.is_authenticated:
-        news = db_sess.query(News).filter(
-            (News.user == current_user) | (News.is_private != True))
-    else:
-        news = db_sess.query(News).filter(News.is_private != True)
-    return render_template("index.html", news=news)
+    form = LoginForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        user = db_sess.query(User).filter(User.email == form.email.data).first()
+        if user and user.check_password(form.password.data):
+            login_user(user, remember=form.remember_me.data)
+            return redirect("/home_page")
+        return render_template('index.html',
+                               message="Неправильный логин или пароль",
+                               form=form)
+    return render_template('index.html', title='Авторизация', form=form)
+
+
+# @app.route("/8")
+# def index():
+#     db_sess = db_session.create_session()
+#     if current_user.is_authenticated:
+#         news = db_sess.query(News).filter(
+#             (News.user == current_user) | (News.is_private != True))
+#     else:
+#         news = db_sess.query(News).filter(News.is_private != True)
+#     return render_template("index.html", news=news)
 
 
 @app.route('/')
@@ -86,4 +101,4 @@ def register():
 
 if __name__ == '__main__':
     main()
-    app.run(port=8080, host='127.0.0.1')
+    app.run(port=500, host='127.0.0.1')
