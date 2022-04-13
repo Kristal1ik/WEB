@@ -53,7 +53,7 @@ def index():
 
 @app.route('/')
 def start():
-    return render_template('base.html')
+    return render_template('baseNEW.html')
 
 
 @app.route('/home_page')
