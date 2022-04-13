@@ -17,36 +17,30 @@
         <h1 class="text-center text-white" id="subs">Предметы</h1>
     </div>
 <section>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <img class="col_1"
-                     src="/static/subjects/chemistry.jpg"
-                     width="300">
+    <div class="container overflow-hidden">
+        <div class="row gy-3">
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <button class="pic-btn btn btn-light" id="chemistry"></button>
+                <div class="line"></div>
             </div>
-            <div class="col">
-                <img src="/static/subjects/history.jpg"
-                     width="300">
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <button class="pic-btn btn btn-light" id="history"></button>
+                <div class="line"></div>
             </div>
-            <div class="col">
-                <img src="/static/subjects/physics.jpg"
-                     width="300">
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <button class="pic-btn btn btn-light" id="physics"></button>
+                <div class="line"></div>
             </div>
-        </div>
-        <h1 class="text-center text-white">Пока так. Если что, это пасхалка)</h1>
-        <div class="row">
-            <div class="col">
-                <img class="col_1"
-                     src="/static/subjects/russian.jpg"
-                     width="300">
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <button class="pic-btn btn btn-light" id="russian"></button>
+                <div class="line"></div>
             </div>
-            <div class="col">
-                <img src="/static/subjects/social studies.jpg"
-                     width="300">
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <button class="pic-btn btn btn-light" id="social_studies"></button>
+                <div class="line"></div>
             </div>
-            <div class="col">
-                <img src=""
-                     width="300">
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <button class="pic-btn btn btn-light" id="advertisement"></button>
             </div>
         </div>
     </div>
@@ -74,8 +68,41 @@
         }
 
     #subs{
-    background-color: rgb(200, 200, 200)
+    background-color: rgb(200, 200, 200);
+    line-height: 130%;
     }
+    .pic-btn {
+        background-size: 300px 200px;
+        width: 300px;
+        height: 200px;
+        border-spacing: 100 200px;
+
+    }
+    #chemistry {
+        background-image: url("/static/subjects/chemistry.jpg");
+
+    }
+    #history {
+        background-image: url("/static/subjects/history.jpg");
+    }
+
+    #physics {
+        background-image: url("/static/subjects/physics.jpg");
+    }
+
+    #russian {
+        background-image: url("/static/subjects/russian.jpg");
+    }
+
+    #social_studies {
+        background-image: url("/static/subjects/social_studies.jpg");
+    }
+
+    #advertisement {
+        background-image: url("/static/subjects/advertisement.jpg");
+    }
+
+
 
 
 </style>
