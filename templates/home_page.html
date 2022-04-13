@@ -12,7 +12,7 @@
 <body>
     <div class="row">
         <h1 class="text-center text-white" id="head"> <br>Мы не учим <br> Мы учимся <br> _ </h1>
-        <a class="navbar-brand" href="/logout">Выход</a>
+        <a href="/logout" class="button8">Выход</a>
     </div>
     <div class="row">
         <h1 class="text-center text-white" id="subs">Предметы</h1>
@@ -91,6 +91,21 @@
 </html>
 
 <style>
+    a.button8 {
+      display: inline-block;
+      color: white;
+      position:absolute;
+      font-weight: 700;
+      padding: .5em 2em;
+      border: 2px solid;
+      border-radius: 1px;
+      transition: 0.2s;
+      height:40px;
+      width:100px;
+      right:0px
+    }
+        a.button8:hover { background: rgba(255,255,255,.2); }
+        a.button8:active { background: white; }
     @font-face {
     font-family: mr_VlaShu VlaShu;
     font-style: normal;
