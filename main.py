@@ -99,6 +99,13 @@ def register():
     return render_template('register.html', title='Регистрация', form=form)
 
 
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect("/")
+
+
 if __name__ == '__main__':
     main()
     app.run(port=500, host='127.0.0.1')
