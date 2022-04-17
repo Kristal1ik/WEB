@@ -106,6 +106,18 @@ def logout():
     return redirect("/")
 
 
+@app.route('/choice/')
+def choice():
+    return render_template('choice.html')
+
+
+@app.route('/test_create/<n>')
+def test_create(n):
+    param = dict()
+    param['n'] = n
+    return render_template('test_create.html', **param)
+
+
 if __name__ == '__main__':
     main()
     app.run(port=4000, host='127.0.0.1')
