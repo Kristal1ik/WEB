@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Авторизация</title>
+      <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+  <h1>Авторизация</h1>
+<div id="wrapper">
+	<form id="signin" method="post" autocomplete="off">
+		<input type="text" id="user" name="user" placeholder="почта" />
+		<input type="password" id="pass" name="pass" placeholder="пароль" />
+		<button type="submit">&#xf0da;</button>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+
+
+
+	</form>
+</div>
+</body>
+</html>
