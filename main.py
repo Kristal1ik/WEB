@@ -61,6 +61,11 @@ def home():
     return render_template('home_page.html')
 
 
+@app.route('/subjects_page')
+def subjects_page():
+    return render_template('subjects_page.html')
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()

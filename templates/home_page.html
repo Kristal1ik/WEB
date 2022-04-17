@@ -7,81 +7,79 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Главная страница</title>
+
 </head>
 <body>
-    <div class="row">
-        <h1 class="text-center text-white" id="head"> <br>Мы не учим <br> Мы учимся <br> _ </h1>
-        <a href="/logout" class="button8">Выход</a>
-    </div>
-    <div class="row">
-        <h1 class="text-center text-white" id="subs">Предметы</h1>
-    </div>
-<section>
-    <div class="container overflow-hidden">
-        <div class="row gy-3">
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <button class="pic-btn btn btn-light" id="chemistry"></button>
-                <div style="text-align:center;">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу освоить</button>
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу объяснить</button>
-                    </div>
-                </div>
-                <div class="line"></div>
+
+
+<div class="row">
+    <h1 class="text-center text-white" id="head"><br>Мы не учим <br> Мы учимся <br> _ </h1>
+    <a href="/logout" class="button8">Выход</a>
+    <p></p>
+</div>
+
+<div class="container overflow-hidden">
+    <div class="row gy-3" id="main_row">
+
+        <div class="row align-items-center" id="first_row">
+            <div class="col-1"></div>
+            <p></p>
+            <div class="col-xl-8 col-lg-8 col-md-4 col-sm-6">
+                <h2 class="text-center text-white">Помогай!</h2>
+                <p class="text-center text1">На сайте ты можешь выбрать предмет, в котором силен,</p>
+                <p class="text-center text1">и предложить свою помощь в усвоении материала.</p>
+                <p class="text-center text1">Будь готов откликнуться на просьбы других учащихся!</p>
+                <p class="text-center text1">Чем больше ты помогаешь, тем больше сможешь заработать баллов.</p>
+                <p class="text-center text1">За работу!</p>
             </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <button class="pic-btn btn btn-light" id="history"></button>
-                <div style="text-align:center;">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу освоить</button>
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу объяснить</button>
-                    </div>
-                </div>
-                <div class="line"></div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <button class="pic-btn btn btn-light" id="physics"></button>
-                <div style="text-align:center;">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу освоить</button>
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу объяснить</button>
-                    </div>
-                </div>
-                <div class="line"></div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <button class="pic-btn btn btn-light" id="russian"></button>
-                <div style="text-align:center;">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу освоить</button>
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу объяснить</button>
-                    </div>
-                </div>
-                <div class="line"></div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <button class="pic-btn btn btn-light" id="social_studies"></button>
-                <div style="text-align:center;">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу освоить</button>
-                        <button type="button" class="btn btn-outline-secondary action-but">Хочу объяснить</button>
-                    </div>
-                </div>
-                <div class="line"></div>
-            </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-                <button class="pic-btn btn btn-light" id="advertisement"></button>
-                <div style="text-align:center;">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-outline-danger action-but">Хочу купить</button>
-                        <button type="button" class="btn btn-outline-danger action-but">Сильно хочу купить</button>
+
+            <div class="col-xl-4 col-lg-2 col-md-1 col-sm-1">
+                <div class="card" style="width: 21rem;">
+                    <img src="static/help.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text1">Помощь другим</h5>
+                        <p class="card-text text2">Объясняй материал другим ученикам, и получай баллы!</p>
+                        <div style="text-align:center;">
+                            <a href="#" class="btn btn-success text1">Выбрать предмет</a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <p></p>
+        </div>
+
+        <!--    Second row-->
+
+        <div class="row align-items-center" id="second_row">
+
+            <p></p>
+            <div class="col-xl-4 col-lg-2 col-md-1 col-sm-1">
+                <div class="card" style="width: 21rem;">
+                    <img src="static/idea.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text1">Готовые помочь</h5>
+                        <p class="card-text text2">Попроси учащихся объяснить затруднительную тему!</p>
+                        <div style="text-align:center;">
+                            <a href="#" class="btn btn-success text1">Выбрать предмет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-4 col-sm-6">
+                <h2 class="text-center text-white">Получай знания!</h2>
+                <p></p>
+                <p class="text-center text1">В разделе каждого предмета ты сможешь увидеть ребят,</p>
+                <p class="text-center text1">готовых передать тебе свои знания.</p>
+                <p class="text-center text1">Договаривайся с ними с помощью сайта,</p>
+                <p class="text-center text1">и встречайся на переменах или после школы для объяснения материала.</p>
+                <p class="text-center text1">Вперед и вверх!</p>
+            </div>
+            <p></p>
         </div>
     </div>
-</section>
+    <p></p>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -91,7 +89,7 @@
 </html>
 
 <style>
-    a.button8 {
+a.button8 {
       display: inline-block;
       color: white;
       position:absolute;
@@ -104,64 +102,67 @@
       width:100px;
       right:0px
     }
-        a.button8:hover { background: rgba(255,255,255,.2); }
-        a.button8:active { background: white; }
+    a.button8:hover { background: rgba(255,255,255,.2); }
+    a.button8:active { background: white; }
+
     @font-face {
-    font-family: mr_VlaShu VlaShu;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/static/20354.woff);
+            font-family: mr_VlaShu VlaShu;
+            font-style: normal;
+            font-weight: 400;
+            src: url(/static/20354.woff);
     }
+    @font-face {
+            font-family: txt_font;
+            font-style: normal;
+            font-weight: 400;
+            src: url(/static/20823.woff);
+       }
+
+    @font-face {
+            font-family: h2_font;
+            font-style: normal;
+            font-weight: 400;
+            src: url(/static/h2_font.woff);
+       }
+
     #head{
-        background-image: url(/static/head0.jpg);
-        font-size: 90px;
-        font-family: mr_VlaShu VlaShu;
-        background-size: 100%;
-        }
-
-    #subs{
-    background-color: rgb(200, 200, 200);
-    line-height: 130%;
-    }
-    .pic-btn {
-        background-size: 300px 200px;
-        width: 300px;
-        height: 200px;
-        border-spacing: 100 200px;
-
-    }
-    #chemistry {
-        background-image: url("/static/subjects/chemistry.jpg");
-
-    }
-    #history {
-        background-image: url("/static/subjects/history.jpg");
+            background-image: url(/static/head0.jpg);
+            font-size: 90px;
+            font-family: mr_VlaShu VlaShu;
+            background-size: 100%;
     }
 
-    #physics {
-        background-image: url("/static/subjects/physics.jpg");
+    .text1 {
+    font-size: 18px;
+    font-family: txt_font;
+    line-height: 0.9em;
     }
 
-    #russian {
-        background-image: url("/static/subjects/russian.jpg");
+    h2 {
+    font-family: h2_font;
+    font-size: 48px;
+    background-color: rgba(0, 0, 0, 0.7)
     }
 
-    #social_studies {
-        background-image: url("/static/subjects/social_studies.jpg");
+    #first_row {
+    margin: 5% auto;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 0;
+
+    background-color: #a3e4d7
     }
 
-    #advertisement {
-        background-image: url("/static/subjects/advertisement.jpg");
+    #second_row {
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 0;
+
+    background-color: #abebc6
     }
-    .btn {
-    margin: 0 auto;
-    display: block;
-    }
-
-
-
-
-
-
 
 </style>
