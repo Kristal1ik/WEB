@@ -56,11 +56,11 @@
                 </div>
             {% endfor %}
         </ppp></center>
-        <pppp><center>
-        {{ form.remember_me() }} {{ form.remember_me.label }}<br>
-        {{ form.submit(type="submit", class="btn btn-primary") }}<br>
-        <div>{{ message }}</div>
-        </pppp></center>
+        <center>
+            {{ form.remember_me() }} {{ form.remember_me.label }}<br>
+            {{ form.submit(type="submit", class="btn btn-primary") }}<br>
+            <div>{{ message }}</div>
+        </center>
 
     </form>
 {% endblock %}
