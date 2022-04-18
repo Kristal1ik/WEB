@@ -1,51 +1,91 @@
-<h1>Регистрация</h1>
-<form action="" method="post">
-    {{ form.hidden_tag() }}
-    <p>
-        {{ form.email.label }}<br>
-        {{ form.email(class="form-control", type="email") }}<br>
-        {% for error in form.email.errors %}
-            <p class="alert alert-danger" role="alert">
-                {{ error }}
-            </p>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.password.label }}<br>
-        {{ form.password(class="form-control", type="password") }}<br>
-        {% for error in form.password.errors %}
-            <p class="alert alert-danger" role="alert">
-                {{ error }}
-            </p>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.password_again.label }}<br>
-        {{ form.password_again(class="form-control", type="password") }}<br>
-        {% for error in form.password_again.errors %}
-            <p class="alert alert-danger" role="alert">
-                {{ error }}
-            </p>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.name.label }}<br>
-        {{ form.name(class="form-control") }}<br>
-        {% for error in form.name.errors %}
-            <p class="alert alert-danger" role="alert">
-                {{ error }}
-            </p>
-        {% endfor %}
-    </p>
-    <p>
-        {{ form.about.label }}<br>
-        {{ form.about(class="form-control") }}<br>
-        {% for error in form.about.errors %}
-            <p class="alert alert-danger" role="alert">
-                {{ error }}
-            </p>
-        {% endfor %}
-    </p>
-    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
-    {{message}}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+            <title>Продолжение твоего начала</title>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bungee+Shade&family=Caveat:wght@400;700&family=Open+Sans:wght@300&family=Rubik+Puddles&display=swap" rel="stylesheet">		<style>
+		pp {
+            font-size: 70px;
+	        padding-top: 5px;
+			font-family: 'Caveat', cursive;
+		}
+		ppp {
+            font-size: 30px;
+	        padding-top: 10px;
+	        padding-bottom: 5px
+		}
+		pppp {
+            font-size: 20px;
+	        padding-top: 10px;
+	        padding-bottom: 10px
+		}
+
+        body {
+  background: #C6D8FF;
+}
+        header{
+            width: 100%;
+            background: #E7ECFF;
+            height: 100px;
+        }
+</style>
+</head>
+<body>
+<header>
+    <center><pp>Регистрация</pp></center></header>
+    <form action="" method="post">
+        <center>{{ form.hidden_tag() }}</center>
+        <center><ppp>
+            {{ form.email.label }}<br>
+            {{ form.email(class="form-control", type="email") }}<br>
+            {% for error in form.email.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </ppp></center>
+        <center><ppp>
+            {{ form.password.label }}<br>
+            {{ form.password(class="form-control", type="password") }}<br>
+            {% for error in form.password.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </ppp></center>
+        <center><ppp>
+            {{ form.password_again.label }}<br>
+            {{ form.password_again(class="form-control", type="password") }}<br>
+            {% for error in form.password_again.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </ppp></center>
+        <center><ppp>
+            {{ form.name.label }}<br>
+            {{ form.name(class="form-control") }}<br>
+            {% for error in form.name.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </ppp></center>
+        <center><ppp>
+            {{ form.about.label }}<br>
+            {{ form.about(class="form-control") }}<br>
+            {% for error in form.about.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </ppp></center>
+        <center>
+            {{ form.submit(type="submit", class="btn btn-primary") }}
+            {{message}}
+        </center>
 </form>
+</body>
+</html>
+
+
