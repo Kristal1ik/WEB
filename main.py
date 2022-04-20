@@ -111,18 +111,26 @@ def logout():
     return redirect("/")
 
 
-@app.route('/choice/')
+@app.route('/choice')
 def choice():
     return render_template('choice.html')
 
 
-@app.route('/test_create/<n>')
-def test_create(n):
-    param = dict()
-    param['n'] = n
-    return render_template('test_create.html', **param)
+@app.route('/test_create3')
+def test_create3():
+    return render_template('test_create3.html')
+
+
+@app.route('/test_create5')
+def test_create5():
+    return render_template('test_create5.html')
+
+
+@app.route('/test_create10')
+def test_create10():
+    return render_template('test_create10.html')
 
 
 if __name__ == '__main__':
     main()
-    app.run(port=4000, host='127.0.0.1')
+    app.run(port=4007, host='127.0.0.1')
