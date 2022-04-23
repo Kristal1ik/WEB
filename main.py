@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, make_response, session
+from flask import Flask, render_template, redirect, request, make_response, session, url_for
 from flask_wtf import FlaskForm
 from werkzeug.exceptions import abort
 from wtforms import EmailField, PasswordField, BooleanField, SubmitField
@@ -129,6 +129,20 @@ def test_create5():
 @app.route('/test_create10')
 def test_create10():
     return render_template('test_create10.html')
+
+
+@app.route("/login2", methods=["POST", "GET"])
+def login2():
+    if request.method == "POST":
+        userr = request.form["sm"]
+        return redirect(url_for("user", usr=userr))
+    else:
+        return render_template("test_create3.html")
+
+
+@app.route("/<usr>")
+def user(usr):
+    return f"<h1>{usr}</h1>"
 
 
 if __name__ == '__main__':
