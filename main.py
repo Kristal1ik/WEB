@@ -134,11 +134,10 @@ def test_create10():
 @app.route("/login2", methods=["POST", "GET"])
 def login2():
     if request.method == "POST":
-        userr = request.form["sm"]
-        return redirect(url_for("user", usr=userr))
+        user = request.form["nm"]
+        return redirect(url_for("user", usr=user))
     else:
         return render_template("test_create3.html")
-
 
 @app.route("/<usr>")
 def user(usr):
