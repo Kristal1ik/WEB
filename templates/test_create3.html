@@ -7,10 +7,34 @@
 <body>
 {% block content %}
 <form action="#" method="post">
-	<p>Что-то:</p>
-	<p><input type="text" name="sm" /></p>
+	<p>Вопрос №1</p>
+	<p><input type="text" name="nm" /></p>
+
+	<p>Варианты ответа:</p>
+	<input type="radio" id="r11" name="one"><input type="text" name="one"/>
+	<input type="radio" id="r12" name="one"><input type="text" name="one"/>
+	<input type="radio" id="r13" name="one"><input type="text" name="one"/><br>
+
+	<p>Вопрос №2</p>
+	<p><input type="text" name="two" /></p>
+
+	<p>Варианты ответа:</p>
+	<input type="radio" id="r21" name="two"><input type="text" name="two"/>
+	<input type="radio" id="r22" name="two"><input type="text" name="two"/>
+	<input type="radio" id="r23" name="two"><input type="text" name="two"/><br>
+
+	<p>Вопрос №3</p>
+	<p><input type="text" name="three" /></p>
+
+	<p>Варианты ответа:</p>
+	<input type="radio" id="r31" name="three"><input type="text" name="three"/>
+	<input type="radio" id="r32" name="three"><input type="text" name="three"/>
+	<input type="radio" id="r33" name="three"><input type="text" name="three"/>
 	<p><input type="submit" value="submit"/></p>
+
 </form>
+<p style="border:3px #00B344  double; width:175px;">
+текст текст текст текст</p>
 {% endblock %}
 </body>
 </html>
