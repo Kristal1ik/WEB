@@ -116,28 +116,32 @@ def choice():
     return render_template('choice.html')
 
 
-@app.route('/test_create3')
+@app.route("/test_create3", methods=["POST", "GET"])
 def test_create3():
-    return render_template('test_create3.html')
-
-
-@app.route('/test_create5')
-def test_create5():
-    return render_template('test_create5.html')
-
-
-@app.route('/test_create10')
-def test_create10():
-    return render_template('test_create10.html')
-
-
-@app.route("/login2", methods=["POST", "GET"])
-def login2():
     if request.method == "POST":
-        user = request.form["nm"]
+        user = request.form["one"]
         return redirect(url_for("user", usr=user))
     else:
         return render_template("test_create3.html")
+
+
+@app.route("/test_create5", methods=["POST", "GET"])
+def test_create5():
+    if request.method == "POST":
+        user = request.form["one"]
+        return redirect(url_for("user", usr=user))
+    else:
+        return render_template("test_create5.html")
+
+
+@app.route("/test_create10", methods=["POST", "GET"])
+def test_create10():
+    if request.method == "POST":
+        user = request.form["one"]
+        return redirect(url_for("user", usr=user))
+    else:
+        return render_template("test_create10.html")
+
 
 @app.route("/<usr>")
 def user(usr):
