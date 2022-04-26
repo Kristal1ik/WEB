@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+            <title>Продолжение твоего начала</title>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bungee+Shade&family=Caveat:wght@400;700&family=Open+Sans:wght@300&family=Rubik+Puddles&display=swap" rel="stylesheet">		<style>
+		pp {
+            font-size: 70px;
+	        padding-top: 5px;
+			font-family: 'Caveat', cursive;
+		}
+		ppp {
+            font-size: 40px;
+	        padding-top: 10px;
+	        padding-bottom: 10px
+		}
+		pppp {
+            font-size: 20px;
+	        padding-top: 10px;
+	        padding-bottom: 10px
+		}
+
+        body {
+  background: #C6D8FF;
+}
+        header{
+            width: 100%;
+            background: #E7ECFF;
+            height: 100px;
+        }
+
+</style>
+</head>
+    <body>
+        {% block content %}
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <p>
+            <header><center><pp>Добавить вопрос</pp></center></header>
+            <ppp><center>
+            {{ form.title.label }}<br>
+                {{ form.title(class="form-control") }}<br>
+                {% for error in form.title.errors %}
+                    <p class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </p>
+                {% endfor %}
+                {{ form.content.label }}<br>
+                {{ form.content(class="form-control", value="Вопроос") }}<br>
+                {% for error in form.content.errors %}<br>
+                    <p content="alert alert-danger" role="alert"><br>
+                        {{ error }}
+                    </p>
+                {% endfor %}
+
+
+                <p>{{ form.submit(type="submit", class="btn btn-primary",value="Опубликовать") }}</p>
+            {{message}}
+            </center></ppp>
+        </form>
+        {% endblock %}
+    </body>
+</html>
