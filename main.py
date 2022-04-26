@@ -57,11 +57,13 @@ def start():
 
 
 @app.route('/home_page')
+@login_required
 def home():
     return render_template('home_page.html')
 
 
 @app.route('/subjects_page')
+@login_required
 def subjects_page():
     return render_template('subjects_page.html')
 
@@ -112,11 +114,13 @@ def logout():
 
 
 @app.route('/choice')
+@login_required
 def choice():
     return render_template('choice.html')
 
 
 @app.route("/test_create3", methods=["POST", "GET"])
+@login_required
 def test_create3():
     if request.method == "POST":
         user = request.form["one"]
@@ -126,6 +130,7 @@ def test_create3():
 
 
 @app.route("/test_create5", methods=["POST", "GET"])
+@login_required
 def test_create5():
     if request.method == "POST":
         user = request.form["one"]
@@ -135,6 +140,7 @@ def test_create5():
 
 
 @app.route("/test_create10", methods=["POST", "GET"])
+@login_required
 def test_create10():
     if request.method == "POST":
         user = request.form["one"]
@@ -144,6 +150,7 @@ def test_create10():
 
 
 @app.route("/<usr>")
+@login_required
 def user(usr):
     return f"<h1>{usr}</h1>"
 
