@@ -206,10 +206,10 @@ def news_delete(id):
     return redirect('/')
 
 
-# @app.route("/subjects_page/<usr>")
-# @login_required
-# def user(usr):
-#     return f"<h1>{usr}</h1>"
+@app.route("/subjects_page/<usr>")
+@login_required
+def user(usr):
+    return f"<h1>{usr}</h1>"
 
 
 if __name__ == '__main__':
