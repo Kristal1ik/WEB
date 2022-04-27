@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
             <title>Продолжение твоего начала</title>
-<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bungee+Shade&family=Caveat:wght@400;700&family=Open+Sans:wght@300&family=Rubik+Puddles&display=swap" rel="stylesheet">		<style>
+            <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bungee+Shade&family=Caveat:wght@400;700&family=Open+Sans:wght@300&family=Rubik+Puddles&display=swap" rel="stylesheet">		<style>
 		pp {
             font-size: 70px;
 	        padding-top: 5px;
@@ -45,16 +45,19 @@
                         {{ error }}
                     </p>
                 {% endfor %}
+            </p>
+            <p>
                 {{ form.content.label }}<br>
-                {{ form.content(class="form-control", value="Вопроос") }}<br>
-                {% for error in form.content.errors %}<br>
+                {{ form.content(class="form-control") }}<br>
+                {% for error in form.content.errors %}
                     <p content="alert alert-danger" role="alert"><br>
                         {{ error }}
                     </p>
                 {% endfor %}
-
-
-                <p>{{ form.submit(type="submit", class="btn btn-primary",value="Опубликовать") }}</p>
+            </p>
+<!--            Личное-->
+            <p>{{ form.is_private() }} {{ form.is_private.label }}</p>
+            <p>{{ form.submit(type="submit", class="btn btn-primary", value="Опубликовать")}}</p>
             {{message}}
             </center></ppp>
         </form>
