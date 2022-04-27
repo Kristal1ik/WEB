@@ -148,9 +148,15 @@ def add_news():
         current_user.news.append(news)
         db_sess.merge(current_user)
         db_sess.commit()
-        # return redirect('/')
-    return render_template('question.html', title='Добавление новости',
+        return redirect('/recorded')
+    return render_template('question.html',
                            form=form)
+
+
+@app.route('/recorded')
+@login_required
+def recorded():
+    return render_template('recorded.html')
 
 
 @app.route('/news/<int:id>', methods=['GET', 'POST'])
@@ -182,9 +188,7 @@ def edit_news(id):
         else:
             abort(404)
     return render_template('question.html',
-                           title='Редактирование новости',
-                           form=form
-                           )
+                           form=form)
 
 
 @app.route('/news_delete/<int:id>', methods=['GET', 'POST'])
@@ -210,4 +214,4 @@ def news_delete(id):
 
 if __name__ == '__main__':
     main()
-    app.run(port=4005, host='127.0.0.1')
+    app.run(port=4008, host='127.0.0.1')
