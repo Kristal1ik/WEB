@@ -26,15 +26,20 @@ def load_user(user_id):
     return db_sess.query(User).get(user_id)
 
 
-# @app.route("/8")
-# def index():
-#     db_sess = db_session.create_session()
-#     if current_user.is_authenticated:
-#         news = db_sess.query(News).filter(
-#             (News.user == current_user) | (News.is_private != True))
-#     else:
-#         news = db_sess.query(News).filter(News.is_private != True)
-#     return render_template("index.html", news=news)
+@app.route("/index")
+def index():
+    db_sess = db_session.create_session()
+    if current_user.is_authenticated:
+        news = db_sess.query(News).filter(
+            (News.user == current_user))
+        print('l')
+
+    else:
+        news = db_sess.query(News)
+        print(news)
+        print('ll')
+
+    return render_template("index.html", news=news)
 
 
 @app.route('/')
@@ -144,7 +149,7 @@ def add_news():
         news = News()
         news.title = form.title.data
         news.content = form.content.data
-        news.is_private = form.is_private.data
+        # news.is_private = form.is_private.data
         current_user.news.append(news)
         db_sess.merge(current_user)
         db_sess.commit()
@@ -214,4 +219,4 @@ def user(usr):
 
 if __name__ == '__main__':
     main()
-    app.run(port=4008, host='127.0.0.1')
+    app.run(port=4020, host='127.0.0.1')
