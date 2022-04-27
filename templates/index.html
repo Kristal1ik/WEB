@@ -1,26 +1,29 @@
-<!DOCTYPE HTML>
-<html>
- <head>
-  <meta charset="utf-8">
-  <title>Тег INPUT</title>
- </head>
- <body>
+{% block content %}
+<h1>Вопросы</h1>
+{% for item in news%}
+<div class="col-md6 border rounded">
+<p style="border:3px #00B344  double; width:175px;">
 
- <form name="test" method="post" action="input1.php">
-  <p><b>Ваше имя:</b><br>
-   <input type="text" size="40">
-  </p>
-  <p><b>Каким браузером в основном пользуетесь:</b><Br>
-   <input type="radio" name="browser" value="ie"> Internet Explorer<Br>
-   <input type="radio" name="browser" value="opera"> Opera<Br>
-   <input type="radio" name="browser" value="firefox"> Firefox<Br>
-  </p>
-  <p>Комментарий<Br>
-   <textarea name="comment" cols="40" rows="3"></textarea></p>
-  <p><input type="submit" value="Отправить">
-   <input type="reset" value="Очистить"></p>
- </form>
+    <h2>{{item.title}}</h2>
+    <div>
 
- </body>
-</html>
+        {{item.content}}
+    </div>
 
+    <div>
+        Автор - {{item.user.name}}, Дата написания - {{item.created_date}}
+    </div>
+    {% if current_user.is_authenticated and current_user == item.user %}
+    <div>
+        <a href="/news/{{ item.id }}" class="btn btn-warning">
+            Изменить
+        </a>
+        <a href="/news_delete/{{ item.id }}" class="btn btn-danger">
+            Удалить
+        </a>
+    </div>
+    </p>
+{% endif %}
+</div>
+{% endfor %}
+{% endblock %}
