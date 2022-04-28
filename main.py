@@ -211,6 +211,11 @@ def news_delete(id):
     return redirect('/index')
 
 
+@app.route('/help')
+def help():
+    return render_template('help.html')
+
+
 @app.route("/subjects_page/<usr>")
 @login_required
 def user(usr):
