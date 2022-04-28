@@ -164,6 +164,11 @@ def recorded():
     return render_template('recorded.html')
 
 
+@app.route('/recorded2')
+@login_required
+def recorded2():
+    return render_template('recorded2.html')
+
 @app.route('/question/<int:id>', methods=['GET', 'POST'])
 @login_required
 def edit_news(id):
