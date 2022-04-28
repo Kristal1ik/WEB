@@ -1,106 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-          crossorigin="anonymous">
-    <title>Количество вопросов</title>
-    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bungee+Shade&family=Caveat:wght@400;700&family=Open+Sans:wght@300&family=Rubik+Puddles&display=swap"
-          rel="stylesheet">
-    <style>
-		p {
-		    background: #E7ECFF;
-            font-size: 70px;
-	        padding-top: 5px;
-			font-family: 'Caveat', cursive;
-	        text-align: center;
-		}
-		body {
-            background: #C6D8FF;
-        }
-        .closing-button {
-          left: 30%;
-          bottom: -100px;
-          text-decoration: none;
-          display: inline-block;
-          margin: 10px;
-          color: white;
-          box-shadow: 0 0 0 2px white;
-          padding: 15px 0;
-          width: 30px;
-          text-align: center;
-          text-transform: uppercase;
-          letter-spacing: 3px;
-          position: relative;
-          overflow: hidden;
-        }
-        .closing-button span {
-          font-family: 'Montserrat', sans-serif;
-          position: relative;
-          z-index: 5;
-        }
-        .closing-button:before, .closing-button:after {
-          content: "";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          left: 0;
-        }
-        .closing-button:before {
-          transform: translateX(-100%);
-          background: white;
-          transition: transform .3s cubic-bezier(.55, .055, .675, .19);
-        }
-        .closing-button:after {
-          background: #FDEED9;
-          transform: translateX(100%);
-          transition: transform .3s cubic-bezier(.16, .73, .58, .62) .3s;
-        }
-        .closing-button:hover:before, .closing-button:hover:after {
-          transform: translateX(0);
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Главная страница</title>
 
-
-
-
-    </style>
 </head>
 <body>
-    <p>Выбери количество вопросов</p>
 
+
+<div class="row">
+    <h1 class="text-center text-white" id="head"><br>Мы не учим <br> Мы учимся <br> _ </h1>
+    <a href="/logout" class="button8">Выход</a>
+    <p></p>
+</div>
+<div class="row">
+    <h1 class="text-center text-white" id="subs">Количество вопросов в тесте?</h1>
+</div>
 <div class="container overflow-hidden">
-        <div class="row align-items-center" id="first_row">
-            <div class="col-12">
-                <input type="radio" name="quest_qual" value="1">1
-                <input type="radio" name="quest_qual" value="2">2
-                <input type="radio" name="quest_qual" value="3">3
-            </div>
-            <div class="col-12">
-                <input type="radio" name="quest_qual" value="4">4
-                <input type="radio" name="quest_qual" value="5">5
-                <input type="radio" name="quest_qual" value="6">6
-            </div>
-            <div class="col-12">
-                <input type="radio" name="quest_qual" value="7">7
-                <input type="radio" name="quest_qual" value="8">8
-                <input type="radio" name="quest_qual" value="9">9
-            </div>
-            <div class="col-12">
-                <input type="radio" name="quest_qual" value="10">10
-                <input type="radio" name="quest_qual" value="11">11
-                <input type="radio" name="quest_qual" value="12">12
-            </div>
+    <p></p>
+    <p></p>
+    <div class="row gy-3" id="main_row">
+        <div class="col-xl-4 col-md-6 col-sm-12">
+            <button class="pic-btn btn btn-light" id="three"></button>
+            <div class="line"></div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-sm-12">
+            <button class="pic-btn btn btn-light" id="five"></button>
+            <div class="line"></div>
+        </div>
+        <div class="col-xl-4 col-md-6 col-sm-12">
+            <button class="pic-btn btn btn-light" id="ten"></button>
+            <div class="line"></div>
         </div>
     </div>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 </body>
 </html>
+
+<style>
+a.button8 {
+      display: inline-block;
+      color: white;
+      position:absolute;
+      font-weight: 700;
+      padding: .5em 2em;
+      border: 2px solid;
+      border-radius: 1px;
+      transition: 0.2s;
+      height:40px;
+      width:100px;
+      right:0px
+    }
+    a.button8:hover { background: rgba(255,255,255,.2); }
+    a.button8:active { background: white; }
+
+    @font-face {
+            font-family: mr_VlaShu VlaShu;
+            font-style: normal;
+            font-weight: 400;
+            src: url(/static/20354.woff);
+    }
+    @font-face {
+            font-family: txt_font;
+            font-style: normal;
+            font-weight: 400;
+            src: url(/static/20823.woff);
+       }
+
+    @font-face {
+            font-family: h2_font;
+            font-style: normal;
+            font-weight: 400;
+            src: url(/static/h2_font.woff);
+       }
+
+    #head{
+            background-image: url(/static/head0.jpg);
+            font-size: 90px;
+            font-family: mr_VlaShu VlaShu;
+            background-size: 100%;
+    }
+
+    .text1 {
+    font-size: 18px;
+    font-family: txt_font;
+    line-height: 0.9em;
+    }
+
+    h2 {
+    font-family: h2_font;
+    font-size: 48px;
+    background-color: rgba(0, 0, 0, 0.7)
+    }
+
+    #first_row {
+    margin: 5% auto;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 0;
+
+    background-color: #a3e4d7
+    }
+
+    #second_row {
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 0;
+
+    background-color: #abebc6
+    }
+
+    #subs{
+    background-color: rgb(200, 200, 200);
+    line-height: 130%;
+    }
+
+
+    #three {
+    background-image: url("/static/third.jpg");
+    }
+
+    #five {
+    background-image: url("/static/five.jpg");
+    }
+
+    #ten {
+    background-image: url("/static/ten.jpg");
+    }
+
+    .pic-btn {
+        background-size: 300px 200px;
+        width: 300px;
+        height: 200px;
+        border-spacing: 100 200px;
+
+</style>
