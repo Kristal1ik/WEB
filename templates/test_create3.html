@@ -25,7 +25,8 @@
 <form action="#" method="post">
     <div class="container overflow-hidden">
         <div class="row gy-3">
-            <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="col-xl-4 col-md-6 col-sm-12" id="first_col">
+                <p></p>
                 <h4 class="text-center">Вопрос №1</h4>
                 <p class="undequest"> Введи вопрос теста</p>
                 <p style="text-align:center;"><textarea name="one" cols="40" rows="3"></textarea></p>
@@ -41,9 +42,10 @@
                     <p></p>
                     <input type="text" name="one"><input type="radio" id="r13" name="two">
                 </div>
+                <p></p>
             </div>
             <div class="col-xl-4 col-md-6 col-sm-12">
-
+                <p></p>
                 <h4 class="text-center">Вопрос №2</h4>
                 <p class="undequest"> Введи вопрос теста</p>
                 <p style="text-align:center;"><textarea name="two" cols="40" rows="3"></textarea></p>
@@ -59,9 +61,10 @@
                     <p></p>
                     <input type="text" name="two"><input type="radio" id="r23" name="two">
                 </div>
+                <p></p>
             </div>
-            <div class="col-xl-4 col-md-6 col-sm-12">
-
+            <div class="col-xl-4 col-md-6 col-sm-12" id="third_col">
+                <p></p>
                 <h4 class="text-center">Вопрос №3</h4>
                 <p class="undequest"> Введи вопрос теста</p>
                 <p style="text-align:center;"><textarea name="three" cols="40" rows="3"></textarea></p>
@@ -78,6 +81,7 @@
                     <p></p>
                     <input type="text" name="three"><input type="radio" id="r33" name="three">
                 </div>
+                <p></p>
             </div>
         </div>
         <div class="row gy-3">
@@ -187,11 +191,13 @@ a.button8 {
     }
 
     h4 {
+    border-radius: 10px;
     background-color: #96d498;
     text-color: 045707;
     }
 
     h5 {
+    border-radius: 5px;
     background-color: #96d4bd;
     text-color: 045738;
 
@@ -202,7 +208,15 @@ a.button8 {
         font-size: 20px;
     }
 
+    #first_col {
+    border-radius: 30px;
+    background-color: #c8f7fa;
+    }
 
+    #third_col {
+    border-radius: 30px;
+    background-color: #c8cafa;
+    }
 
 
 
