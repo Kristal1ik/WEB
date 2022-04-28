@@ -15,10 +15,10 @@
     </div>
     {% if current_user.is_authenticated and current_user == item.user %}
     <div>
-        <a href="/news/{{ item.id }}" class="btn btn-warning">
+        <a href="/question/{{ item.id }}" class="btn btn-warning">
             Изменить
         </a>
-        <a href="/news_delete/{{ item.id }}" class="btn btn-danger">
+        <a href="/question_delete/{{ item.id }}" class="btn btn-danger">
             Удалить
         </a>
     </div>
