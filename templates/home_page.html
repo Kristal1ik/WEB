@@ -41,7 +41,25 @@
                         <h5 class="card-title text1">Помощь другим</h5>
                         <p class="card-text text2">Объясняй материал другим ученикам и получай баллы!</p>
                         <div style="text-align:center;">
-                            <a href="/index" class="btn btn-success text1">Выбрать предмет</a>
+                            <button class="btn btn-success text1" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                Выбрать предмет
+                            </button>
+                            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                                 aria-labelledby="offcanvasExampleLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Задай свой вопрос</h5>
+                                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <p style="text-align:center;"><textarea name="three" cols="40" rows="3"></textarea>
+                                    </p>
+                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                        <button type="button" class="btn btn-success">Опубликовать</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,11 +79,12 @@
                         <h5 class="card-title text1">Готовые помочь</h5>
                         <p class="card-text text2">Попроси учащихся объяснить непонятную тему!</p>
                         <div style="text-align:center;">
-                            <a href="/question" class="btn btn-success text1">Выбрать предмет</a>
+                            <a href="/index" class="btn btn-success text1">Выбрать предмет</a>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="col-xl-8 col-lg-8 col-md-4 col-sm-6">
                 <h2 class="text-center text-white">Получай знания!</h2>
                 <p></p>
@@ -164,5 +183,6 @@ a.button8 {
 
     background-color: #abebc6
     }
+
 
 </style>
