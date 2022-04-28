@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-            <title>Продолжение твоего начала</title>
+            <title>Твой вопрос</title>
             <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Bungee+Shade&family=Caveat:wght@400;700&family=Open+Sans:wght@300&family=Rubik+Puddles&display=swap" rel="stylesheet">		<style>
 		pp {
             font-size: 70px;
@@ -36,7 +36,7 @@
         <form action="" method="post">
             {{ form.hidden_tag() }}
             <p>
-            <header><center><pp>Добавить вопрос</pp></center></header>
+            <header><center><pp>{{ title }}</pp></center></header>
             <ppp><center>
             {{ form.title.label }}<br>
                 {{ form.title(class="form-control") }}<br>
