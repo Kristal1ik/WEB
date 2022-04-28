@@ -155,7 +155,7 @@ def add_news():
         db_sess.commit()
         return redirect('/recorded')
     return render_template('question.html',
-                           form=form)
+                           form=form, title='Добавить вопрос')
 
 
 @app.route('/recorded')
@@ -164,7 +164,7 @@ def recorded():
     return render_template('recorded.html')
 
 
-@app.route('/news/<int:id>', methods=['GET', 'POST'])
+@app.route('/question/<int:id>', methods=['GET', 'POST'])
 @login_required
 def edit_news(id):
     form = NewsForm()
@@ -189,14 +189,14 @@ def edit_news(id):
             news.content = form.content.data
             news.is_private = form.is_private.data
             db_sess.commit()
-            return redirect('/')
+            return redirect('/index')
         else:
             abort(404)
     return render_template('question.html',
-                           form=form)
+                           form=form, title='Редактирование вопроса')
 
 
-@app.route('/news_delete/<int:id>', methods=['GET', 'POST'])
+@app.route('/question_delete/<int:id>', methods=['GET', 'POST'])
 @login_required
 def news_delete(id):
     db_sess = db_session.create_session()
@@ -208,7 +208,7 @@ def news_delete(id):
         db_sess.commit()
     else:
         abort(404)
-    return redirect('/')
+    return redirect('/index')
 
 
 @app.route("/subjects_page/<usr>")
